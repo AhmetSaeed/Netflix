@@ -20,12 +20,14 @@ function App() {
         .then((res) => {
             return res.json()
         }).then((data) => {
-            const filteredData = data.map(item => item.show)
-            setData(filteredData)
+
+            const userD = data.map(item => item.show)
+
+            setData(userD)
 
         })
         .catch(() => {
-            console.log("error we can't find that Movie for now")
+            // console.log("error we can't find that Movie for now")
         })
 
 
